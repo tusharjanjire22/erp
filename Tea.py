@@ -8,10 +8,9 @@ from google.genai import types
 from gtts import gTTS
 import tempfile
 
-API_KEY = "AQ.Ab8RN6JX-zrLZLAUhmbh0ILOw6BrNgkF88OCOw1JgaaiDOxHJw"
-
+api_key = st.secrets["API"]
 client = genai.Client(
-    api_key=API_KEY
+    api_key=api_key
 )
 
 SYSTEM_INSTRUCTION = """
